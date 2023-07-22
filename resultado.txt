@@ -1,2 +1,0 @@
-www.mercadolivre.com.br: 108.139.166.53
-mail.mercadolivre.com.br: 91.194.249.21

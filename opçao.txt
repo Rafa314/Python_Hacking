@@ -1,0 +1,9 @@
+
+Opções de ataques
+
+1.Ataques de negação de serviço (DDoS): Os hackers podem usar o IP real para lançar ataques DDoS, que sobrecarregam o servidor do site com uma quantidade enorme de tráfego falso, tornando-o inacessível para os usuários legítimos.
+2.Invasão e exploração de vulnerabilidades: Ao conhecer o IP real, os hackers podem procurar por vulnerabilidades específicas do servidor, aplicação ou sistema operacional e tentar explorá-las para obter acesso não autorizado ao sistema.
+3.Injeção de SQL: Os hackers podem tentar explorar vulnerabilidades de segurança no site para executar ataques de injeção SQL, que permitem acessar ou manipular informações armazenadas no banco de dados do site.
+4.Hacking de senha: Conhecendo o IP real do servidor, os hackers podem realizar ataques de força bruta ou ataques de dicionário para tentar descobrir senhas de acesso a sistemas e aplicativos.
+5.Roubo de dados: Se o hacker conseguir explorar vulnerabilidades ou obter acesso não autorizado ao servidor, ele pode roubar informações confidenciais, como dados de clientes, informações financeiras ou propriedade intelectual.
+6.Distribuição de malware: O hacker pode hospedar malware ou vírus no servidor do site e, em seguida, tentar infectar os visitantes legítimos com esse conteúdo malicioso.
