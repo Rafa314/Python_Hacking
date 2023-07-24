@@ -1,0 +1,17 @@
+O que são ataques DOS? 
+
+Basicamente são ataques de negação de serviço(Denial Of Service) é uma tentativa de fazer com que aconteça uma sobrecarga 
+em um servidor normalmente. para que os recursos do sistema fiquem indisponíveis.
+Para isso é necessário o envio massivo de pacotes(que geram requests para o servidor.) normalmente servidores web.
+Os atacantes geralmente utilizam a obstrução da mídia de comunicação entre os utilizadores e o sistema de modo a não se 
+comunicarem corretamente. Outra maneira de realizar o ataque é forçar a vítima a reinicializar ou consumir todos os recursos 
+de memória, processamento ou de outro hardware de modo a deixá-lo impossibilitado de fornecer o serviço.
+Os ataques DoS envolvem apenas um atacante, sendo um único computador a fazer vários pedidos de pacotes para o alvo. 
+Nesse tipo de ataque, o hacker pode apenas derrubar servidores fracos e computadores comuns com pouca banda e com baixas 
+especificações técnicas.
+
+Como se defender de ataques DoS? 
+Existem inúmeros tipos de servidores que são implementados de forma distinta pelos seus donos  portanto não 
+há uma resposa exata de como se proteger deste ataque.portanto não existe metodologia específica.
+Mas existem medidas preventivas, monitorando constantemente a rede seus acessos. Outra possibilidade é fazer testes de execução 
+para testar a defesa do seu sistema e saber quanto o seu sistema está preparado para um ataque.
