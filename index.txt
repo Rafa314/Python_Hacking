@@ -1,0 +1,72 @@
+DNS em Python
+
+O Domain Name System é muito importante para a coleta de informações e existem inúmeros 
+scripts capazes de concederem informações valiosas para nós. Naturalmente percebemos que 
+nestes scripts, a utilização de listas e arquivos de leituras são importantes para percorrermos 
+entre nomes de subdomínios e registros DNS. 
+
+O que é o DNS? 
+O Domain Name System(Sistema de Nome de Domínio) é um protocolo que provê de uma maneira simples um modo de comunicação
+entre os dispositivos na internet sem lidar com números complexos. primeiramente, cada computador na internet ten seu
+único endereço para comunicação que você você já deve ter ouvido falar: O Endereço IP(Internet Protocol). Um endereço 
+ip se parece com algo como: 142.251.128.110, 4 sessões de dígitos do 0 à 255. Quando você visita um site, não é conveniente
+lembrar desse monte de dígitos, e é essa a função do DNS. Ao invés de se lembrar desse número gigante você se lembra de
+google.com por exemplo. 
+
+Existem códigos específicos desenvolvidos para que possamos descobrir certos endereços de hosts como o google.com por exemplo.
+utilizaremos a lingugem Python pela sua praticidade(como a utilização de listas dinâmicas: armazenamento de inúmeros valores.)
+
+
+O primeiro código: 
+
+1 import socket
+2 domain = input('Target: ')
+3 br_te = ["ns1","ns2","ns3","ns4","www", "ftp","intranet", "mail"]
+4
+5 for name in br_te: 
+6   dns= name + "." + dominio
+7   try: 
+8      print(dns + ":" + socket.gethostbyname(dns))
+9   except socket.gaierror: 
+10      print('Ocorreu um problema.')
+
+primeiramente importamos a biblioteca socket (os sockets implementados em todo sistema operacional
+por ser necessária para a comunicação entre dispositivos normalmente programados em C) que é uma
+biblioteca onde temos acesso a elementos essenciais de rede. neste caso importamos a função 
+"gethostbyname()".
+ 
+Pedimos o alvo que colocaremos na variável domain. após isso criamos a lista br_te onde incluímos
+vários subdomínios: ns1, 2, 3, 4 etc(simplesmente nomes de servidores), endereço da world wide web,
+ftp(file transfer protocol - transferência de arquivos), intranet(rede exclusiva de uma empresa),
+mail(obviamente relacionado ao subdomínio de e-mail). 
+
+Criamos um laço for para percorrer na lista que criamos e nomeamos cada elemento da lista como um 
+name. após isso criamos uma variável chamada dns e concatenamos com . o domínio(domain) e o elemento
+name que percorrerá pela lista. após isso tentamos exibir o resultado do dns com a função gethostbyname 
+que exibirá o o host de cada domínio. após isso fazemos o tratamento de erros com o socket.gaierror e 
+informamos que houve um problema. 
+
+Esse código é bem simples e objetivo. e claramente possui muitos pontos a serem melhorados no entanto é 
+a porta de entrada para o entendimento básico de funções socket para coletas DNS.
+
+Agora estuderemos um Script mais completo:
+
+1 import dns.resolver
+2
+3 domain = input('TARGET: ')
+4 records = ["AAAA","A","MX","NS"]  
+5
+6 for record in records: 
+7       result = dns.resolver.resolve(domain, record, raise_on_no_answer=False)
+8       if result.rrset is not None: 
+9             print(result.rrset)
+
+Primeiramente importamos a bibliotecas dns e adicionamos a função 'resolver', após isso pedimos o 
+valor do alvo e armazenos na variável domain. após isso criamos uma lista chamada records com 
+exemplos de registros DNS(AAAA: para ipv6, A: para ipv4, MX: para e-mail e NS: para name server)
+Criamos um for para percorrer em records e definimos como result a função dns.resolver,resolve e 
+colocamos alguns argumentos: domain, records e raise_on_no_answer=False - pegamos o domíno, o tipo
+de registro, e o raise_on_no_answer=False - significa que, se não houver resposta para a consulta,
+a função não lançará uma exceção. 
+colocamos um if caso o rrset(resposta) da consulta não for nula. Se não for significa que um registro DNS
+foi encontrado. logo pedimos para o código imprimir a resposta para o registro consultado.
