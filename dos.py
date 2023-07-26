@@ -1,7 +1,7 @@
 import socket
 import threading
 print("============================================================================================================================")
-print("==== ALGORITMO PARA DDoS(Denial Of Service - Negação De Serviço) ====")
+print("==== ALGORITMO PARA DoS(Denial Of Service - Negação De Serviço) ====")
 print("============================================================================================================================")
 
 ataque_num = 0
