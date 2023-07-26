@@ -1,0 +1,10 @@
+Ataque de negação de serviço distribuído(DDoS)
+importamos as bibliotecas threading(é usado para permitir que o código seja executado
+em várias threads simultaneamente) e socket.(gerenciar conexões de rede)
+o código cria um objeto socket usando a função socket.socket(). socket.AF_INET indica que será usado o protocolo IPv4, e socket.SOCK_STREAM 
+especifica que será criado um socket TCP. 
+conectando ao servidor
+enviando a solicitação
+resp = s.recv(4096) aguarda a resposta do servidor. Neste caso, ele aguarda receber até 4096 bytes de dados.
+Loop de criação de threads: O código fora da função attack() é um loop for que cria 300 threads. Cada thread executa a função attack(). Isso permite que 200 conexões simultâneas sejam estabelecidas com o servidor-alvo, enviando 200 solicitações HTTP a cada vez.
+Iniciando as threads: A linha thread.start() inicia cada thread, fazendo com que todas as 300 threads comecem a realizar os ataques simultaneamente.

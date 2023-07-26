@@ -10,8 +10,21 @@ Os ataques DoS envolvem apenas um atacante, sendo um único computador a fazer v
 Nesse tipo de ataque, o hacker pode apenas derrubar servidores fracos e computadores comuns com pouca banda e com baixas 
 especificações técnicas.
 
+O que são ataques DDoS?
+
+DDoS (Distributed Denial of Service) é uma variação dos ataques DoS, em que o atacante utiliza várias fontes (como uma rede de bots ou computadores comprometidos) para sobrecarregar o servidor ou sistema-alvo com uma quantidade massiva de tráfego. A principal diferença entre DoS e DDoS é a escala e a forma como o ataque é conduzido.
+
+Basicamente, o objetivo do ataque DDoS é o mesmo que o DoS: negar o serviço ao tornar o servidor inacessível devido à sobrecarga de recursos, como largura de banda, capacidade de processamento ou memória.
+
 Como se defender de ataques DoS? 
 Existem inúmeros tipos de servidores que são implementados de forma distinta pelos seus donos  portanto não 
 há uma resposa exata de como se proteger deste ataque.portanto não existe metodologia específica.
 Mas existem medidas preventivas, monitorando constantemente a rede seus acessos. Outra possibilidade é fazer testes de execução 
 para testar a defesa do seu sistema e saber quanto o seu sistema está preparado para um ataque.
+
+Como se defender de ataques DDoS?
+Assim como nos ataques DoS, não há uma solução única que sirva para todos os sistemas, uma vez que os servidores podem ser implementados de maneiras diferentes. Contudo, existem algumas medidas preventivas gerais que podem ajudar a mitigar o impacto de um ataque DDoS:
+
+Firewalls e Filtros de Tráfego: Implemente firewalls e filtros de tráfego que possam identificar e bloquear padrões suspeitos de solicitações, evitando que o tráfego malicioso chegue ao servidor.
+Testes de Resistência: Realize testes periódicos para avaliar a capacidade de resistência do seu sistema a ataques DDoS e identificar possíveis vulnerabilidades.
+Monitoramento Contínuo: Monitore constantemente o tráfego da rede e os logs do servidor para identificar padrões incomuns e tomar ações preventivas em tempo real.
